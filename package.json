@@ -8,12 +8,14 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build",
+    "build": "vue-tsc --noEmit --skipLibCheck && vite build",
+    "__build__": "vue-tsc --noEmit && vite build",
     "serve": "vite preview"
   },
   "dependencies": {
     "ant-design-vue": "^2.2.6",
-    "vue": "^3.2.6"
+    "vue": "^3.2.6",
+    "vue-router": "^4.0.11"
   },
   "devDependencies": {
     "@types/node": "^16.7.2",
@@ -31,7 +33,7 @@
     "prettier": "^2.3.2",
     "typescript": "^4.4.2",
     "vite": "^2.5.1",
-    "vite-plugin-components": "^0.13.2",
+    "vite-plugin-style-import": "^1.2.1",
     "vite-plugin-windicss": "^1.3.0",
     "vue-eslint-parser": "^7.10.0",
     "vue-tsc": "^0.2.2",
