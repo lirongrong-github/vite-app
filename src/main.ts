@@ -1,4 +1,4 @@
-// import '/@/design/index.less';
+import '/@/design/index.less';
 
 // Register windi
 import 'virtual:windi.css';
