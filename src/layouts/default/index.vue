@@ -22,7 +22,6 @@
 </script>
 
 <style lang="less">
-  @namespace: ls;
   @prefix-cls: ~'@{namespace}-default-layout';
   .@{prefix-cls} {
     display: flex;
