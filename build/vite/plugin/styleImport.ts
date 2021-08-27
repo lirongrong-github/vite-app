@@ -2,18 +2,21 @@
  *  Introduces component library styles on demand.
  * https://github.com/anncwb/vite-plugin-style-import
  */
-import ViteComponents, { AntDesignVueResolver } from 'vite-plugin-components';
+import styleImport from 'vite-plugin-style-import';
 
 export function configStyleImportPlugin(isBuild: boolean) {
   if (!isBuild) {
     return [];
   }
-  const styleImportPlugin = ViteComponents({
-    globalComponentsDeclaration: true,
-    customComponentResolvers: [
-      AntDesignVueResolver({
-        resolveIcons: true,
-      }),
+  const styleImportPlugin = styleImport({
+    libs: [
+      {
+        libraryName: 'ant-design-vue',
+        esModule: true,
+        resolveStyle: (name) => {
+          return `ant-design-vue/es/${name}/style/index`;
+        },
+      },
     ],
   });
   return styleImportPlugin;
