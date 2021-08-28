@@ -7,10 +7,19 @@
   },
   "version": "0.0.0",
   "scripts": {
+    "bootstrap": "yarn install",
     "dev": "vite",
     "build": "vue-tsc --noEmit --skipLibCheck && vite build",
     "__build__": "vue-tsc --noEmit && vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "clean:cache": "rimraf node_modules/.cache/ && rimraf node_modules/.vite",
+    "clean:lib": "rimraf node_modules",
+    "lint:eslint": "eslint --cache --max-warnings 0  \"{src,mock}/**/*.{vue,ts,tsx}\" --fix",
+    "lint:prettier": "prettier --write  \"src/**/*.{js,json,tsx,css,less,scss,vue,html,md}\"",
+    "lint:stylelint": "stylelint --cache --fix \"**/*.{vue,less,postcss,css,scss}\" --cache --cache-location node_modules/.cache/stylelint/",
+    "lint:lint-staged": "lint-staged -c ./.husky/lintstagedrc.js",
+    "lint:pretty": "pretty-quick --staged",
+    "prepare": "husky install"
   },
   "dependencies": {
     "ant-design-vue": "^2.2.6",
@@ -18,6 +27,8 @@
     "vue-router": "^4.0.11"
   },
   "devDependencies": {
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
     "@types/node": "^16.7.2",
     "@typescript-eslint/eslint-plugin": "^4.29.3",
     "@typescript-eslint/parser": "^4.29.3",
@@ -29,8 +40,16 @@
     "eslint-define-config": "^1.0.9",
     "eslint-plugin-prettier": "^3.4.1",
     "eslint-plugin-vue": "^7.17.0",
+    "husky": "^7.0.2",
     "less": "^4.1.1",
+    "lint-staged": "^11.1.2",
     "prettier": "^2.3.2",
+    "pretty-quick": "^3.1.1",
+    "rimraf": "^3.0.2",
+    "stylelint": "^13.13.1",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-standard": "^22.0.0",
+    "stylelint-order": "^4.1.0",
     "typescript": "^4.4.2",
     "vite": "^2.5.1",
     "vite-plugin-style-import": "^1.2.1",
