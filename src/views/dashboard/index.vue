@@ -1,9 +1,12 @@
 <script lang="ts" setup>
   import { SearchOutlined } from '@ant-design/icons-vue';
   import { Button as aButton } from 'ant-design-vue';
+  import { PageWrapper, PageFooter } from '/@/components/Page/index';
 </script>
 <template>
   <section> dashboard </section>
+  <PageWrapper />
+  <PageFooter />
   <a-button type="primary" shape="circle">
     <template #icon><SearchOutlined /></template>
   </a-button>
