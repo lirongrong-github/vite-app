@@ -17,7 +17,8 @@
     bottom: 0;
     z-index: 99;
     display: flex;
-    width: 100%;
+    // width: 100%;
+    width: calc(100% - 210px);
     align-items: center;
     padding: 0 24px;
     line-height: 44px;
