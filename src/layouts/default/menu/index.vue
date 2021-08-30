@@ -24,11 +24,15 @@
       const onMenuClick = (path: string): void => {
         router.push(path);
       };
+      const onOpenChange = (openKeys: string[]) => {
+        console.log(openKeys);
+      };
       return {
         selectedKeys,
         openKeys,
         onMenuClick,
         prefixCls,
+        onOpenChange,
       };
     },
   });
@@ -40,6 +44,7 @@
       v-model:selectedKeys="selectedKeys"
       v-model:openKeys="openKeys"
       mode="inline"
+      @openChange="onOpenChange"
     >
       <SubMenu key="1">
         <template #title>
@@ -65,6 +70,13 @@
   </section>
 </template>
 
+<style lang="less">
+  .ant-menu {
+    .ant-menu-item {
+      margin: 0 !important;
+    }
+  }
+</style>
 <style lang="less" scoped>
   @prefix-cls: ~'@{namespace}-menu';
 

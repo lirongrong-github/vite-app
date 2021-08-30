@@ -2,11 +2,13 @@
   import { defineComponent } from 'vue-demi';
   import { Layout } from 'ant-design-vue';
   import LayoutMenu from '../menu/index.vue';
+  import { AppLogo } from '/@/components/Application';
 
   export default defineComponent({
     components: {
       Sider: Layout.Sider,
       LayoutMenu,
+      AppLogo,
     },
   });
 </script>
@@ -30,6 +32,8 @@
 </script>
 <template>
   <Sider :width="getMenuWidth" :class="getSiderClass">
+    <AppLogo />
+
     <LayoutMenu />
   </Sider>
 </template>
