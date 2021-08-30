@@ -1,1 +1,3 @@
-<template> workbench </template>
+<template>
+  <section> workbench </section>
+</template>

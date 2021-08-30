@@ -5,7 +5,21 @@
 
 <template>
   <section :class="prefixCls">
-    <RouterView />
+    <!-- <transition name="fade-slide" mode="out-in">
+      <RouterView />
+    </transition> -->
+    <RouterView>
+      <template #default="{ Component, route }">
+        <transition name="fade-slide" mode="out-in" appear>
+          <!-- <keep-alive v-if="openCache" :include="getCaches">
+            <component :is="Component" :key="route.fullPath" />
+          </keep-alive>
+          <component v-else :is="Component" :key="route.fullPath" /> -->
+          <!-- {{ route }} -->
+          <component :is="Component" :key="route.fullPath" />
+        </transition>
+      </template>
+    </RouterView>
   </section>
 </template>
 

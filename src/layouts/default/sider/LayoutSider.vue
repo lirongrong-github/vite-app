@@ -38,6 +38,8 @@
   @prefix-cls: ~'@{namespace}-layout-sideBar';
 
   .@{prefix-cls} {
+    z-index: 200;
+
     &--mix {
       min-height: calc(100% - @header-height);
     }

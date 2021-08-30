@@ -10,55 +10,57 @@
   const TabPane = Tabs.TabPane;
 </script>
 <template>
-  <section> dashboard </section>
-  <Tabs type="editable-card" size="small" :animated="false" :hideAdd="true" :tabBarGutter="3">
-    <template v-for="item in 16" :key="item">
-      <TabPane>
-        <template #tab>
-          <!-- {{ item }} -->
-          <span class="ls-multiple-tabs-content__info"> 仪表盘 {{ item }} </span>
-          <!-- <TabContent :tabItem="item" /> -->
-        </template>
-      </TabPane>
-    </template>
+  <section>
+    <section> dashboard </section>
+    <Tabs type="editable-card" size="small" :animated="false" :hideAdd="true" :tabBarGutter="3">
+      <template v-for="item in 16" :key="item">
+        <TabPane>
+          <template #tab>
+            <!-- {{ item }} -->
+            <span class="ls-multiple-tabs-content__info"> 仪表盘 {{ item }} </span>
+            <!-- <TabContent :tabItem="item" /> -->
+          </template>
+        </TabPane>
+      </template>
 
-    <template #tabBarExtraContent>
-      <section class="ls-tab__content">
-        <RedoOutlined />
-        <DownOutlined style="margin: 0 20px" />
-        <FullscreenOutlined />
-      </section>
-    </template>
-  </Tabs>
-  <a-button type="primary" shape="circle">
-    <template #icon><SearchOutlined /></template>
-  </a-button>
-  <a-button type="primary" shape="circle">A</a-button>
-  <a-button type="primary">
-    <template #icon><SearchOutlined /></template>
-    Search
-  </a-button>
-  <a-button shape="circle">
-    <template #icon><SearchOutlined /></template>
-  </a-button>
-  <a-button>
-    <template #icon><SearchOutlined /></template>
-    Search
-  </a-button>
-  <a-button shape="circle">
-    <template #icon><SearchOutlined /></template>
-  </a-button>
-  <a-button>
-    <template #icon><SearchOutlined /></template>
-    Search
-  </a-button>
-  <a-button type="dashed" shape="circle">
-    <template #icon><SearchOutlined /></template>
-  </a-button>
-  <a-button type="dashed">
-    <template #icon><SearchOutlined /></template>
-    Search
-  </a-button>
+      <template #tabBarExtraContent>
+        <section class="ls-tab__content">
+          <RedoOutlined />
+          <DownOutlined style="margin: 0 20px" />
+          <FullscreenOutlined />
+        </section>
+      </template>
+    </Tabs>
+    <a-button type="primary" shape="circle">
+      <template #icon><SearchOutlined /></template>
+    </a-button>
+    <a-button type="primary" shape="circle">A</a-button>
+    <a-button type="primary">
+      <template #icon><SearchOutlined /></template>
+      Search
+    </a-button>
+    <a-button shape="circle">
+      <template #icon><SearchOutlined /></template>
+    </a-button>
+    <a-button>
+      <template #icon><SearchOutlined /></template>
+      Search
+    </a-button>
+    <a-button shape="circle">
+      <template #icon><SearchOutlined /></template>
+    </a-button>
+    <a-button>
+      <template #icon><SearchOutlined /></template>
+      Search
+    </a-button>
+    <a-button type="dashed" shape="circle">
+      <template #icon><SearchOutlined /></template>
+    </a-button>
+    <a-button type="dashed">
+      <template #icon><SearchOutlined /></template>
+      Search
+    </a-button>
+  </section>
 </template>
 
 <style lang="less">
