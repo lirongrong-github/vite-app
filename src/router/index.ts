@@ -15,7 +15,20 @@ export const router = createRouter({
     {
       path: '/dashboard',
       name: 'Dashboard',
-      component: () => import('/@/views/dashboard/index.vue'),
+      redirect: '/dashboard/analysis',
+      component: LAYOUT,
+      children: [
+        {
+          path: '/dashboard/analysis',
+          name: 'Analysis',
+          component: () => import('/@/views/dashboard/analysis/index.vue'),
+        },
+        {
+          path: '/dashboard/workbench',
+          name: 'Workbench',
+          component: () => import('/@/views/dashboard/workbench/index.vue'),
+        },
+      ],
     },
     {
       path: '/sys',
@@ -25,13 +38,18 @@ export const router = createRouter({
     {
       path: '/feat',
       name: 'Feat',
-      component: LAYOUT,
       redirect: '/feat/click-out-side',
+      component: LAYOUT,
       children: [
         {
           path: '/feat/click-out-side',
           name: 'ClickOutSide',
           component: () => import('/@/views/demo/feat/click-out-side/index.vue'),
+        },
+        {
+          path: '/feat/ws',
+          name: 'Ws',
+          component: () => import('/@/views/demo/feat/ws/index.vue'),
         },
       ],
     },

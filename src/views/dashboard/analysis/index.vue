@@ -1,5 +1,10 @@
 <script lang="ts" setup>
-  import { SearchOutlined } from '@ant-design/icons-vue';
+  import {
+    SearchOutlined,
+    RedoOutlined,
+    DownOutlined,
+    FullscreenOutlined,
+  } from '@ant-design/icons-vue';
   import { Button as aButton } from 'ant-design-vue';
   import { Tabs } from 'ant-design-vue';
   const TabPane = Tabs.TabPane;
@@ -7,16 +12,23 @@
 <template>
   <section> dashboard </section>
   <Tabs type="editable-card" size="small" :animated="false" :hideAdd="true" :tabBarGutter="3">
-    <template v-for="item in 6" :key="item">
+    <template v-for="item in 16" :key="item">
       <TabPane>
         <template #tab>
-          {{ item }}
+          <!-- {{ item }} -->
+          <span class="ls-multiple-tabs-content__info"> 仪表盘 {{ item }} </span>
           <!-- <TabContent :tabItem="item" /> -->
         </template>
       </TabPane>
     </template>
 
-    <template #tabBarExtraContent> right </template>
+    <template #tabBarExtraContent>
+      <section class="ls-tab__content">
+        <RedoOutlined />
+        <DownOutlined style="margin: 0 20px" />
+        <FullscreenOutlined />
+      </section>
+    </template>
   </Tabs>
   <a-button type="primary" shape="circle">
     <template #icon><SearchOutlined /></template>
@@ -52,20 +64,40 @@
 <style lang="less">
   .ant-tabs.ant-tabs-card {
     .ant-tabs-card-bar {
+      .ant-tabs-nav-container {
+        display: flex;
+        align-items: center;
+      }
+
       .ant-tabs-tab {
+        display: inline-flex;
+        align-items: center;
         height: calc(30px - 2px);
         padding-right: 12px;
         line-height: calc(30px - 2px);
+        border-radius: 2px;
+        margin-left: 5px;
       }
 
       .ant-tabs-tab-active {
         position: relative;
-        padding-left: 18px;
         color: #fff !important;
         background: #0960bd;
-        border: 0;
+        border: 1px solid #0960bd;
         transition: none;
       }
+
+      .ls-multiple-tabs-content__info {
+        font-size: 12px;
+      }
+    }
+
+    .ls-tab__content {
+      width: 108px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   }
 </style>

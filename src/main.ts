@@ -5,8 +5,10 @@ import 'virtual:windi.css';
 
 import { createApp } from 'vue';
 import App from './App.vue';
-import { router, setupRouter } from '/@/router';
-// import { setupStore } from '/@/store';
+import { setupRouter } from '/@/router';
+import { setupStore } from '/@/store';
+
+import { initAppConfigStore } from '/@/logics/initAppConfig';
 
 // Importing on demand in local development will increase the number of browser requests by around 20%.
 // This may slow down the browser refresh speed.
@@ -19,16 +21,19 @@ async function bootstrap() {
   const app = createApp(App);
 
   // Configure store
-  // setupStore(app);
+  setupStore(app);
 
   // Configure routing
   setupRouter(app);
 
+  // Initialize internal system configuration
+  initAppConfigStore();
+
   // Mount when the route is ready
   // https://next.router.vuejs.org/api/#isready
-  await router.isReady();
+  // await router.isReady();
 
   app.mount('#app', true);
 }
 
-void bootstrap();
+bootstrap();

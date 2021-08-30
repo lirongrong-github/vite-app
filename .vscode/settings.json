@@ -10,6 +10,7 @@
   "editor.tabSize": 2,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "diffEditor.ignoreTrimWhitespace": false,
+  "editor.formatOnSave": true /** 自动保存格式化 */,
   //===========================================
   //============= Other =======================
   //===========================================
