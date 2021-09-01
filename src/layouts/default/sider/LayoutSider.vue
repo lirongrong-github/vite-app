@@ -31,11 +31,14 @@
   });
 </script>
 <template>
-  <Sider :width="getMenuWidth" :class="getSiderClass">
-    <AppLogo />
+  <section :class="prefixCls">
+    <section :class="`${prefixCls}--placeholder`" :style="{ width: `${getMenuWidth}px` }" />
+    <Sider :width="getMenuWidth" :class="getSiderClass">
+      <AppLogo />
 
-    <LayoutMenu />
-  </Sider>
+      <LayoutMenu />
+    </Sider>
+  </section>
 </template>
 
 <style lang="less" scoped>
@@ -46,6 +49,24 @@
 
     &--mix {
       min-height: calc(100% - @header-height);
+    }
+
+    &--placeholder {
+      overflow: hidden;
+      flex: 0 0 210px;
+      max-width: 210px;
+      min-width: 210px;
+      transition: all 0.2s ease 0s;
+      height: 100%;
+    }
+
+    &--fixed {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      background: #001529;
+      color: #b7bdc3;
     }
   }
 </style>

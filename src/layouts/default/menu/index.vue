@@ -24,8 +24,12 @@
       const onMenuClick = (path: string): void => {
         router.push(path);
       };
-      const onOpenChange = (openKeys: string[]) => {
-        console.log(openKeys);
+      const onOpenChange = (_openKeys: string[]) => {
+        openKeys.value = _openKeys.length ? [_openKeys[_openKeys.length - 1]] : [];
+      };
+      const onSelect = ({ keyPath, selectedKeys: _selectedKeys }: any) => {
+        openKeys.value = keyPath;
+        selectedKeys.value = _selectedKeys;
       };
       return {
         selectedKeys,
@@ -33,6 +37,7 @@
         onMenuClick,
         prefixCls,
         onOpenChange,
+        onSelect,
       };
     },
   });
@@ -45,6 +50,7 @@
       v-model:openKeys="openKeys"
       mode="inline"
       @openChange="onOpenChange"
+      @select="onSelect"
     >
       <SubMenu key="1">
         <template #title>
@@ -66,6 +72,12 @@
         <MenuItem key="2-1" @click="onMenuClick('/feat')">ClickOutSide组件</MenuItem>
         <MenuItem key="2-2" @click="onMenuClick('/feat/ws')">websocket测试</MenuItem>
       </SubMenu>
+      <MenuItem key="3" @click="onMenuClick('/feat')">
+        <template #icon>
+          <AppstoreAddOutlined />
+        </template>
+        <span>Test</span>
+      </MenuItem>
     </Menu>
   </section>
 </template>
@@ -76,11 +88,27 @@
       margin: 0 !important;
     }
   }
+
+  .ant-menu-dark .ant-menu-inline.ant-menu-sub {
+    background: #0c2135;
+  }
+
+  .ant-menu-dark.ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-item-selected {
+    background: #0960bd;
+  }
 </style>
 <style lang="less" scoped>
   @prefix-cls: ~'@{namespace}-menu';
 
   .@{prefix-cls} {
+    height: calc(100% - @header-height);
+    background: #001529;
     z-index: 200;
+    overflow-x: hidden;
+    overflow-y: overlay;
+
+    &::-webkit-scrollbar-thumb:hover {
+      background: #485461;
+    }
   }
 </style>
