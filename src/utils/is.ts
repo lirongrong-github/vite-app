@@ -5,3 +5,7 @@ export function is(val: unknown, type: string) {
 export function isObject(val: any): val is Record<any, any> {
   return val !== null && is(val, 'Object');
 }
+
+export function isNumber(val: unknown): val is number {
+  return is(val, 'Number');
+}
