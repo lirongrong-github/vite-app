@@ -14,7 +14,7 @@ export interface UseEventParams {
   wait?: number;
 }
 
-export function useEventLister({
+export function useEventListener({
   el = window,
   name,
   listener,
