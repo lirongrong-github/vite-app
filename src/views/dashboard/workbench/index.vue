@@ -5,7 +5,7 @@
     DownOutlined,
     FullscreenOutlined,
   } from '@ant-design/icons-vue';
-  import { Button as aButton } from 'ant-design-vue';
+  import { Button as AButton } from 'ant-design-vue';
   import { Tabs } from 'ant-design-vue';
   const TabPane = Tabs.TabPane;
 </script>
