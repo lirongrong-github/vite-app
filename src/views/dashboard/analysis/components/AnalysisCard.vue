@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { defineComponent } from 'vue-demi';
+  import { defineComponent } from 'vue';
   import { Card, Tag } from 'ant-design-vue';
   export default defineComponent({
     components: { Card, Tag },

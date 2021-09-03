@@ -5,3 +5,5 @@ import appProvider from './src/AppProvider';
 
 export const AppLogo = withInstall(appLogo);
 export const AppProvider = withInstall(appProvider);
+
+export { useAppProviderContext } from './src/useAppContext';
