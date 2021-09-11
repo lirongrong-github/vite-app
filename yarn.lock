@@ -4592,10 +4592,10 @@ vue-router@^4.0.11:
   dependencies:
     "@vue/devtools-api" "^6.0.0-beta.14"
 
-vue-tsc@^0.2.2:
-  version "0.2.3"
-  resolved "https://registry.nlark.com/vue-tsc/download/vue-tsc-0.2.3.tgz#12bf48e3c9b1e553d31aad0c641722d5d15841d8"
-  integrity sha1-Er9I48mx5VPTGq0MZBci1dFYQdg=
+vue-tsc@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.nlark.com/vue-tsc/download/vue-tsc-0.3.0.tgz#3b3872bf4f1d2e4409b57adbd826032e253db406"
+  integrity sha1-Ozhyv08dLkQJtXrb2CYDLiU9tAY=
   dependencies:
     vscode-vue-languageservice "^0.27.0"
 

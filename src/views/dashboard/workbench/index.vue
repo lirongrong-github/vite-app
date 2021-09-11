@@ -10,7 +10,7 @@
   const TabPane = Tabs.TabPane;
 </script>
 <template>
-  <section>
+  <section class="test">
     <section> dashboard </section>
     <Tabs type="editable-card" size="small" :animated="false" :hideAdd="true" :tabBarGutter="3">
       <template v-for="item in 16" :key="item">
@@ -64,42 +64,44 @@
 </template>
 
 <style lang="less">
-  .ant-tabs.ant-tabs-card {
-    .ant-tabs-card-bar {
-      .ant-tabs-nav-container {
+  .test {
+    .ant-tabs.ant-tabs-card {
+      .ant-tabs-card-bar {
+        .ant-tabs-nav-container {
+          display: flex;
+          align-items: center;
+        }
+
+        .ant-tabs-tab {
+          display: inline-flex;
+          align-items: center;
+          height: calc(30px - 2px);
+          padding-right: 12px;
+          line-height: calc(30px - 2px);
+          border-radius: 2px;
+          margin-left: 5px;
+        }
+
+        .ant-tabs-tab-active {
+          position: relative;
+          color: #fff !important;
+          background: #0960bd;
+          border: 1px solid #0960bd;
+          transition: none;
+        }
+
+        .ls-multiple-tabs-content__info {
+          font-size: 12px;
+        }
+      }
+
+      .ls-tab__content {
+        width: 108px;
+        height: 40px;
         display: flex;
         align-items: center;
+        justify-content: center;
       }
-
-      .ant-tabs-tab {
-        display: inline-flex;
-        align-items: center;
-        height: calc(30px - 2px);
-        padding-right: 12px;
-        line-height: calc(30px - 2px);
-        border-radius: 2px;
-        margin-left: 5px;
-      }
-
-      .ant-tabs-tab-active {
-        position: relative;
-        color: #fff !important;
-        background: #0960bd;
-        border: 1px solid #0960bd;
-        transition: none;
-      }
-
-      .ls-multiple-tabs-content__info {
-        font-size: 12px;
-      }
-    }
-
-    .ls-tab__content {
-      width: 108px;
-      height: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
     }
   }
 </style>

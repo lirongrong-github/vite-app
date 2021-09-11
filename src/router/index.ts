@@ -53,19 +53,19 @@ export const router = createRouter({
         },
       ],
     },
-    /* {
+    {
       path: '/comp',
       name: 'Comp',
       component: LAYOUT,
-      redirect: '/comp/transition',
+      redirect: '/comp/button',
       children: [
         {
-          path: '/comp/transition',
-          name: 'Transition',
-          component: () => import('/@/views/demo/comp/transition/index.vue'),
+          path: '/comp/button',
+          name: 'Button',
+          component: () => import('/@/views/demo/comp/button/index.vue'),
         },
       ],
-    }, */
+    },
   ],
   strict: true,
   scrollBehavior: () => ({ left: 0, top: 0 }),

@@ -72,7 +72,16 @@
         <MenuItem key="2-1" @click="onMenuClick('/feat')">ClickOutSide组件</MenuItem>
         <MenuItem key="2-2" @click="onMenuClick('/feat/ws')">websocket测试</MenuItem>
       </SubMenu>
-      <MenuItem key="3" @click="onMenuClick('/feat')">
+      <SubMenu key="3">
+        <template #title>
+          <span>
+            <AppstoreAddOutlined />
+            <span>组件</span>
+          </span>
+        </template>
+        <MenuItem key="3-1" @click="onMenuClick('/comp')">Button</MenuItem>
+      </SubMenu>
+      <MenuItem key="4" @click="onMenuClick('/feat')">
         <template #icon>
           <AppstoreAddOutlined />
         </template>

@@ -9,6 +9,7 @@ import { setupRouter } from '/@/router';
 import { setupStore } from '/@/store';
 
 import { initAppConfigStore } from '/@/logics/initAppConfig';
+import { registerGlobComp } from '/@/components/registerGlobComp';
 
 // Importing on demand in local development will increase the number of browser requests by around 20%.
 // This may slow down the browser refresh speed.
@@ -19,6 +20,9 @@ if (import.meta.env.DEV) {
 
 async function bootstrap() {
   const app = createApp(App);
+
+  // Register global components
+  registerGlobComp(app);
 
   // Configure store
   setupStore(app);
