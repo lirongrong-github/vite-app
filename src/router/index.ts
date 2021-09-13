@@ -2,6 +2,8 @@
 import type { App } from 'vue';
 import { createRouter, createWebHashHistory } from 'vue-router';
 
+import { EXCEPTION_COMPONENT, PAGE_NOT_FOUND_NAME } from '/@/router/constant';
+
 import { LAYOUT } from './constant';
 
 // app router
@@ -63,6 +65,28 @@ export const router = createRouter({
           path: '/comp/button',
           name: 'Button',
           component: () => import('/@/views/demo/comp/button/index.vue'),
+        },
+      ],
+    },
+    {
+      path: '/:path(.*)*',
+      name: PAGE_NOT_FOUND_NAME,
+      component: LAYOUT,
+      meta: {
+        title: 'ErrorPage',
+        hideBreadcrumb: true,
+        hideMenu: true,
+      },
+      children: [
+        {
+          path: '/:path(.*)*',
+          name: PAGE_NOT_FOUND_NAME,
+          component: EXCEPTION_COMPONENT,
+          meta: {
+            title: 'ErrorPage',
+            hideBreadcrumb: true,
+            hideMenu: true,
+          },
         },
       ],
     },

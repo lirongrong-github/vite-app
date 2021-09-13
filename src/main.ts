@@ -5,7 +5,8 @@ import 'virtual:windi.css';
 
 import { createApp } from 'vue';
 import App from './App.vue';
-import { setupRouter } from '/@/router';
+import { router, setupRouter } from '/@/router';
+import { setupRouterGuard } from '/@/router/guard';
 import { setupStore } from '/@/store';
 
 import { initAppConfigStore } from '/@/logics/initAppConfig';
@@ -29,6 +30,9 @@ async function bootstrap() {
 
   // Configure routing
   setupRouter(app);
+
+  // router-guard
+  setupRouterGuard(router);
 
   // Initialize internal system configuration
   initAppConfigStore();
