@@ -8,14 +8,9 @@
   //===========================================
   "explorer.openEditors.visible": 0,
   "editor.tabSize": 2,
-  "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "diffEditor.ignoreTrimWhitespace": false,
-  //===========================================
-  //============= Eslint ======================
-  //===========================================
-  // "eslint.alwaysShowStatus": true,
-
+  "editor.formatOnSave": true /** 自动保存格式化 */,
   //===========================================
   //============= Other =======================
   //===========================================
@@ -110,7 +105,6 @@
   },
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
-    // "source.fixAll.stylelint": true
   },
   "[vue]": {
     "editor.codeActionsOnSave": {

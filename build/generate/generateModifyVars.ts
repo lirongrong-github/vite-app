@@ -1,3 +1,5 @@
+// import { getThemeVariables } from 'ant-design-vue/dist/theme';
+
 import { resolve } from 'path';
 
 /**
@@ -6,6 +8,7 @@ import { resolve } from 'path';
 export function generateModifyVars() {
   return {
     hack: `true; @import (reference) "${resolve('src/design/config.less')}";`,
+    'primary-color': '#0960bd',
     'success-color': '#55D187', //  Success color
     'error-color': '#ED6F6F', //  False color
     'warning-color': '#EFBD47', //   Warning color

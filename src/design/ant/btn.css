@@ -1,0 +1,188 @@
+[data-theme='light'] .ant-btn.ant-btn-link.is-disabled {
+  color: rgba(0, 0, 0, 0.25);
+  text-shadow: none;
+  cursor: not-allowed !important;
+  background-color: transparent !important;
+  border-color: transparent !important;
+  box-shadow: none;
+}
+[data-theme='dark'] .ant-btn.ant-btn-link.is-disabled {
+  color: rgba(255, 255, 255, 0.25) !important;
+  text-shadow: none;
+  cursor: not-allowed !important;
+  background-color: transparent !important;
+  border-color: transparent !important;
+  box-shadow: none;
+}
+.ant-btn-success.ant-btn-link:not([disabled='disabled']) {
+  color: #55d187;
+}
+.ant-btn-success.ant-btn-link:not([disabled='disabled']):hover,
+.ant-btn-success.ant-btn-link:not([disabled='disabled']):focus {
+  color: #7ddca3;
+  border-color: transparent;
+}
+.ant-btn-success.ant-btn-link:not([disabled='disabled']):active {
+  color: #34bf6c;
+}
+.ant-btn-success.ant-btn-link.ant-btn-loading::before,
+.ant-btn-warning.ant-btn-link.ant-btn-loading::before,
+.ant-btn-error.ant-btn-link.ant-btn-loading::before,
+.ant-btn-background-ghost.ant-btn-link.ant-btn-loading::before,
+.ant-btn.ant-btn-link.ant-btn-loading::before {
+  background: transparent;
+}
+.ant-btn-success:not(.ant-btn-link, .is-disabled) {
+  color: #fff;
+  background-color: #55d187;
+  border-color: #55d187;
+}
+.ant-btn-success:not(.ant-btn-link, .is-disabled):hover,
+.ant-btn-success:not(.ant-btn-link, .is-disabled):focus {
+  color: #fff;
+  background-color: #7ddca3;
+  border-color: #7ddca3;
+}
+.ant-btn-success:not(.ant-btn-link, .is-disabled):active {
+  background-color: #34bf6c;
+  border-color: #34bf6c;
+}
+.ant-btn-warning.ant-btn-link:not([disabled='disabled']) {
+  color: #ed6f6f;
+}
+.ant-btn-warning.ant-btn-link:not([disabled='disabled']):hover,
+.ant-btn-warning.ant-btn-link:not([disabled='disabled']):focus {
+  color: #f39c9c;
+  border-color: transparent;
+}
+.ant-btn-warning.ant-btn-link:not([disabled='disabled']):active {
+  color: #e74242;
+}
+.ant-btn-warning:not(.ant-btn-link, .is-disabled) {
+  color: #fff;
+  background-color: #ed6f6f;
+  border-color: #ed6f6f;
+}
+.ant-btn-warning:not(.ant-btn-link, .is-disabled):hover,
+.ant-btn-warning:not(.ant-btn-link, .is-disabled):focus {
+  color: #fff;
+  background-color: #f39c9c;
+  border-color: #f39c9c;
+}
+.ant-btn-warning:not(.ant-btn-link, .is-disabled):active {
+  background-color: #e74242;
+  border-color: #e74242;
+}
+.ant-btn-error.ant-btn-link:not([disabled='disabled']) {
+  color: #efbd47;
+}
+.ant-btn-error.ant-btn-link:not([disabled='disabled']):hover,
+.ant-btn-error.ant-btn-link:not([disabled='disabled']):focus {
+  color: #f3ce76;
+  border-color: transparent;
+}
+.ant-btn-error.ant-btn-link:not([disabled='disabled']):active {
+  color: #ebac18;
+}
+.ant-btn-error:not(.ant-btn-link, .is-disabled) {
+  color: #fff;
+  background-color: #efbd47;
+  border-color: #efbd47;
+}
+.ant-btn-error:not(.ant-btn-link, .is-disabled):hover,
+.ant-btn-error:not(.ant-btn-link, .is-disabled):focus {
+  color: #fff;
+  background-color: #f3ce76;
+  border-color: #f3ce76;
+}
+.ant-btn-error:not(.ant-btn-link, .is-disabled):active {
+  background-color: #ebac18;
+  border-color: #ebac18;
+}
+.ant-btn-background-ghost {
+  border-width: 1px;
+  background-color: transparent !important;
+}
+.ant-btn-background-ghost[disabled],
+.ant-btn-background-ghost[disabled]:hover {
+  color: rgba(255, 255, 255, 0.4) !important;
+  background-color: transparent !important;
+  border-color: rgba(255, 255, 255, 0.4) !important;
+}
+.ant-btn-dashed.ant-btn-background-ghost,
+.ant-btn-default.ant-btn-background-ghost {
+  color: #fff;
+  border-color: #fff;
+}
+.ant-btn-dashed.ant-btn-background-ghost:hover,
+.ant-btn-default.ant-btn-background-ghost:hover,
+.ant-btn-dashed.ant-btn-background-ghost:focus,
+.ant-btn-default.ant-btn-background-ghost:focus {
+  color: #ffffff;
+  border-color: #ffffff;
+}
+.ant-btn-dashed.ant-btn-background-ghost:active,
+.ant-btn-default.ant-btn-background-ghost:active {
+  color: #e6e6e6;
+  border-color: #e6e6e6;
+}
+.ant-btn-dashed.ant-btn-background-ghost[disabled],
+.ant-btn-default.ant-btn-background-ghost[disabled],
+.ant-btn-dashed.ant-btn-background-ghost[disabled]:hover,
+.ant-btn-default.ant-btn-background-ghost[disabled]:hover {
+  color: rgba(255, 255, 255, 0.4) !important;
+  border-color: rgba(255, 255, 255, 0.4) !important;
+}
+.ant-btn-background-ghost.ant-btn-success:not(.ant-btn-link) {
+  color: #55d187;
+  background-color: transparent;
+  border-color: #55d187;
+  border-width: 1px;
+}
+.ant-btn-background-ghost.ant-btn-success:not(.ant-btn-link):hover,
+.ant-btn-background-ghost.ant-btn-success:not(.ant-btn-link):focus {
+  color: #7ddca3 !important;
+  border-color: #7ddca3;
+}
+.ant-btn-background-ghost.ant-btn-success:not(.ant-btn-link):active {
+  color: #34bf6c;
+  border-color: #34bf6c;
+}
+.ant-btn-background-ghost.ant-btn-warning:not(.ant-btn-link) {
+  color: #ed6f6f;
+  background-color: transparent;
+  border-color: #ed6f6f;
+  border-width: 1px;
+}
+.ant-btn-background-ghost.ant-btn-warning:not(.ant-btn-link):hover,
+.ant-btn-background-ghost.ant-btn-warning:not(.ant-btn-link):focus {
+  color: #f39c9c !important;
+  border-color: #f39c9c;
+}
+.ant-btn-background-ghost.ant-btn-warning:not(.ant-btn-link):active {
+  color: #e74242;
+  border-color: #e74242;
+}
+.ant-btn-background-ghost.ant-btn-error:not(.ant-btn-link) {
+  color: #efbd47;
+  background-color: transparent;
+  border-color: #efbd47;
+  border-width: 1px;
+}
+.ant-btn-background-ghost.ant-btn-error:not(.ant-btn-link):hover,
+.ant-btn-background-ghost.ant-btn-error:not(.ant-btn-link):focus {
+  color: #f3ce76 !important;
+  border-color: #f3ce76;
+}
+.ant-btn-background-ghost.ant-btn-error:not(.ant-btn-link):active {
+  color: #ebac18;
+  border-color: #ebac18;
+}
+.ant-btn-ghost.ant-btn-link:not([disabled='disabled']) {
+  color: #fff;
+}
+.ant-btn-ghost.ant-btn-link:not([disabled='disabled']):hover,
+.ant-btn-ghost.ant-btn-link:not([disabled='disabled']):focus {
+  color: #ffffff;
+  border-color: transparent;
+}
