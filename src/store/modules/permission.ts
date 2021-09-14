@@ -1,5 +1,8 @@
+import type { AppRouteRecordRaw } from '/@/router/types';
+
 import { defineStore } from 'pinia';
 import { store } from '/@/store';
+import { asyncRoutes } from '/@/router/routes';
 
 interface PermissionState {
   // Whether the route has been dynamically added
@@ -20,6 +23,9 @@ export const usePermissionStore = defineStore({
   actions: {
     setDynamicAddedRoute(added: boolean) {
       this.isDynamicAddedRoute = added;
+    },
+    buildRoutesAction(): AppRouteRecordRaw[] {
+      return asyncRoutes;
     },
   },
 });

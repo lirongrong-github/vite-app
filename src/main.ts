@@ -12,6 +12,8 @@ import { setupStore } from '/@/store';
 import { initAppConfigStore } from '/@/logics/initAppConfig';
 import { registerGlobComp } from '/@/components/registerGlobComp';
 
+import '/@/router/routes';
+
 // Importing on demand in local development will increase the number of browser requests by around 20%.
 // This may slow down the browser refresh speed.
 // Therefore, only enable on-demand importing in production environments .

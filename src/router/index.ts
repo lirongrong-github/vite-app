@@ -1,15 +1,17 @@
-// import type { RouteRecordRaw } from 'vue-router';
+import type { RouteRecordRaw } from 'vue-router';
 import type { App } from 'vue';
 import { createRouter, createWebHashHistory } from 'vue-router';
 
-import { EXCEPTION_COMPONENT, PAGE_NOT_FOUND_NAME } from '/@/router/constant';
+/* import { EXCEPTION_COMPONENT, PAGE_NOT_FOUND_NAME } from '/@/router/constant'; */
 
-import { LAYOUT } from './constant';
+import { basicRoutes } from './routes';
+
+// import { LAYOUT } from './constant';
 
 // app router
 export const router = createRouter({
   history: createWebHashHistory(),
-  routes: [
+  /* routes: [
     {
       path: '/',
       redirect: '/dashboard',
@@ -90,7 +92,8 @@ export const router = createRouter({
         },
       ],
     },
-  ],
+  ], */
+  routes: basicRoutes as unknown as RouteRecordRaw[],
   strict: true,
   scrollBehavior: () => ({ left: 0, top: 0 }),
 });

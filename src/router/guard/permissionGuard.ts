@@ -1,4 +1,4 @@
-import type { Router } from 'vue-router';
+import type { Router, RouteRecordRaw } from 'vue-router';
 
 import { PAGE_NOT_FOUND_NAME } from '/@/router/constant';
 import { usePermissionStoreWithOut } from '/@/store/modules/permission';
@@ -11,10 +11,14 @@ export function createPermissionGuard(router: Router) {
       return;
     }
 
-    router.addRoute({
+    const routes = permissionStore.buildRoutesAction();
+    /* router.addRoute({
       name: 'About',
       path: '/about',
       component: () => import('/@/views/demo/feat/ws/index.vue'),
+    }); */
+    routes.forEach((route) => {
+      router.addRoute(route as unknown as RouteRecordRaw);
     });
 
     permissionStore.setDynamicAddedRoute(true);
