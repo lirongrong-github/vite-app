@@ -13,6 +13,7 @@ declare global {
   // vue
   type PropType<T> = VuePropType<T>;
   type Recordable<T = any> = Record<string, T>;
+  type Nullable<T> = T | null;
 }
 
 /* declare module 'vue' {

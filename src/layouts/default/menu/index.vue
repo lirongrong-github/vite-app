@@ -80,12 +80,13 @@
           </span>
         </template>
         <MenuItem key="3-1" @click="onMenuClick('/comp')">Button</MenuItem>
+        <MenuItem key="3-2" @click="onMenuClick('/comp/full-screen')">全屏</MenuItem>
       </SubMenu>
-      <MenuItem key="4" @click="onMenuClick('/feat')">
+      <MenuItem key="4" @click="onMenuClick('/main-out')">
         <template #icon>
           <AppstoreAddOutlined />
         </template>
-        <span>Test</span>
+        <span>主框架外的页面</span>
       </MenuItem>
     </Menu>
   </section>

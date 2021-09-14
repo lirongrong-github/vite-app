@@ -20,6 +20,14 @@ const comp: AppRouteModule = {
       },
       component: () => import('/@/views/demo/comp/button/index.vue'),
     },
+    {
+      path: '/comp/full-screen',
+      name: 'FullScreen',
+      meta: {
+        title: '全屏',
+      },
+      component: () => import('/@/views/demo/comp/full-screen/index.vue'),
+    },
   ],
 };
 
