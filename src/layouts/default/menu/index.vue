@@ -81,6 +81,7 @@
         </template>
         <MenuItem key="3-1" @click="onMenuClick('/comp')">Button</MenuItem>
         <MenuItem key="3-2" @click="onMenuClick('/comp/full-screen')">全屏</MenuItem>
+        <MenuItem key="3-3" @click="onMenuClick('/comp/count-to')">数字动画</MenuItem>
       </SubMenu>
       <MenuItem key="4" @click="onMenuClick('/main-out')">
         <template #icon>

@@ -24,9 +24,10 @@
         <slot name="title"></slot>
       </template>
     </section>
-    <section :class="`${prefixCls}__action`" @click="$emit('expand')">
+    <section :class="`${prefixCls}__action`">
       <slot name="action" />
       <UpOutlined
+        @click="$emit('expand')"
         :style="{
           transform: show ? 'rotate(0deg)' : 'rotate(180deg)',
           transition: 'all 0.3s ease-in',

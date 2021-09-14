@@ -28,6 +28,14 @@ const comp: AppRouteModule = {
       },
       component: () => import('/@/views/demo/comp/full-screen/index.vue'),
     },
+    {
+      path: '/comp/count-to',
+      name: 'countTo',
+      meta: {
+        title: '数字动画',
+      },
+      component: () => import('/@/views/demo/comp/count-to/index.vue'),
+    },
   ],
 };
 
