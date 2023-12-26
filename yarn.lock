@@ -680,17 +680,17 @@
     hash-sum "^2.0.0"
 
 "@vitejs/plugin-vue@^1.6.0":
-  version "1.6.0"
-  resolved "https://registry.nlark.com/@vitejs/plugin-vue/download/@vitejs/plugin-vue-1.6.0.tgz?cache=0&sync_timestamp=1629825480908&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40vitejs%2Fplugin-vue%2Fdownload%2F%40vitejs%2Fplugin-vue-1.6.0.tgz#e5558e20c20e9098cd5bd65b9901fdcd2c354983"
-  integrity sha1-5VWOIMIOkJjNW9ZbmQH9zSw1SYM=
+  version "1.10.2"
+  resolved "https://registry.yarnpkg.com/@vitejs/plugin-vue/-/plugin-vue-1.10.2.tgz#d718479e2789d8a94b63e00f23f1898ba239253a"
+  integrity sha512-/QJ0Z9qfhAFtKRY+r57ziY4BSbGUTGsPRMpB/Ron3QPwBZM4OZAZHdTa4a8PafCwU5DTatXG8TMDoP8z+oDqJw==
 
 "@volar/code-gen@^0.27.7":
-  version "0.27.7"
-  resolved "https://registry.nlark.com/@volar/code-gen/download/@volar/code-gen-0.27.7.tgz#2914a4055e8947ad710a52f2b8662b2bf6bc8d29"
-  integrity sha1-KRSkBV6JR61xClLyuGYrK/a8jSk=
+  version "0.27.24"
+  resolved "https://registry.yarnpkg.com/@volar/code-gen/-/code-gen-0.27.24.tgz#ccdbe858951c1ee4e0c3979232d52412dc46756a"
+  integrity sha512-s4j/QqOZUW03PeD6LmVYI00Q1C3CfJEOePDOQwDvCTUov4lFk0iSBtFyYhjlLyQ1pdtV1+TDTErkj2aMQtc4PA==
   dependencies:
-    "@volar/shared" "^0.27.7"
-    "@volar/source-map" "^0.27.7"
+    "@volar/shared" "^0.27.24"
+    "@volar/source-map" "^0.27.24"
 
 "@volar/html2pug@^0.27.7":
   version "0.27.7"
@@ -702,6 +702,15 @@
     htmlparser2 "^6.1.0"
     pug "^3.0.2"
 
+"@volar/shared@^0.27.24":
+  version "0.27.24"
+  resolved "https://registry.yarnpkg.com/@volar/shared/-/shared-0.27.24.tgz#a33457ec8ac0b0d367ed54c9e21913a5f8c2d6c2"
+  integrity sha512-Mi8a4GQaiorfb+o4EqOXDZm9E/uBJXgScFgF+NhtcMBOUKHNMKQyLI7YRGumtyJTTdaX7nSDJjGGTkv23tcOtQ==
+  dependencies:
+    upath "^2.0.1"
+    vscode-jsonrpc "^8.0.0-next.2"
+    vscode-uri "^3.0.2"
+
 "@volar/shared@^0.27.7":
   version "0.27.7"
   resolved "https://registry.nlark.com/@volar/shared/download/@volar/shared-0.27.7.tgz#b31766e5570f9bbc4a56886020be9d2642a0faa8"
@@ -710,6 +719,13 @@
     upath "^2.0.1"
     vscode-jsonrpc "^8.0.0-next.1"
     vscode-uri "^3.0.2"
+
+"@volar/source-map@^0.27.24":
+  version "0.27.24"
+  resolved "https://registry.yarnpkg.com/@volar/source-map/-/source-map-0.27.24.tgz#60f2e070c169be82cbf7ffa296a30c2823c5205f"
+  integrity sha512-2I5a7cXqekZ66D6lHep7ttJgvVVtPEBUIe1hnpcGbnXWNA2ya6f6jKNNyTmrXQyfkh32IEuaUd4kocR+3AKMag==
+  dependencies:
+    "@volar/shared" "^0.27.24"
 
 "@volar/source-map@^0.27.7":
   version "0.27.7"
@@ -4443,6 +4459,11 @@ vscode-jsonrpc@8.0.0-next.2, vscode-jsonrpc@^8.0.0-next.1:
   version "8.0.0-next.2"
   resolved "https://registry.nlark.com/vscode-jsonrpc/download/vscode-jsonrpc-8.0.0-next.2.tgz#285fc294be586e4768acd67e5a42efc738a5cac0"
   integrity sha1-KF/ClL5YbkdorNZ+WkLvxzilysA=
+
+vscode-jsonrpc@^8.0.0-next.2:
+  version "8.2.0"
+  resolved "https://registry.yarnpkg.com/vscode-jsonrpc/-/vscode-jsonrpc-8.2.0.tgz#f43dfa35fb51e763d17cd94dcca0c9458f35abf9"
+  integrity sha512-C+r0eKJUIfiDIfwJhria30+TYWPtuHJXHtI7J0YlOmKAo7ogxP20T0zxB7HZQIFhIyvoBPwWskjxrvAtfjyZfA==
 
 vscode-languageserver-protocol@3.17.0-next.8:
   version "3.17.0-next.8"
